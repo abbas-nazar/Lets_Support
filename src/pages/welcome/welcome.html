@@ -1,0 +1,36 @@
+<!-- <ion-header> -->
+  <ion-title>Welcome to this app!</ion-title>
+<!-- </ion-header> -->
+
+<ion-content padding>
+    <ion-title>Welcome to this app!</ion-title>
+
+  <br/>
+  <br/>
+  <br/>
+  
+  <form [formGroup]="signUpEmail" (ngSubmit)="redirectToRegisterPage()">
+    <p>New to THIS APP? Enter your email address</p>
+
+    <ion-list no-lines>
+      <ion-item>
+        <ion-label floating>Enter your email address</ion-label>
+        <ion-input formControlName="email" type="text" ([ngModel])="email"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="!signUpEmail.controls.email.valid && signUpEmail.controls.email.dirty">
+        <p>Please enter a valid email address</p>
+      </ion-item>
+    </ion-list>
+
+  </form>
+
+  <br/>
+  <br/>
+  <br/>
+  
+  <hr/>
+
+  <button ion-button block disabled>Continue with Facebook</button>    
+  <button ion-button block disabled>Continue with Google</button>
+  <button ion-button (click)="continueButton()" block>Log In</button>
+</ion-content>
