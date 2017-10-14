@@ -1,19 +1,20 @@
+/**
+ * TODO:
+ * [ ] Change in HTML form function from test to signUpForm
+ * [X] Remove email
+ * [ ] Remove full name
+ * [ ] Add date of birth
+ * [ ] Add terms
+ * [ ] Add 'already a member?'
+ * [ ] Add validation
+ * 
+ */
+
 import { Component } from '@angular/core';
 import { Http } from '@angular/http'
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the SignUpPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-/**
- * Todo:
- * Change in HTML form function from test to signUpForm
- * 
- */
+import {FormGroup, FormBuilder, FormControl, Validators} from "@angular/forms"
 
 @IonicPage()
 @Component({
@@ -21,20 +22,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'sign-up.html',
 })
 export class SignUpPage {
-  user = {}
   results: any = "nope"
-  email: any
+  signUpUser: FormGroup
+  user: { username: string, password: string, fullname: string, email: string } = {
+    username: '',
+    password: '',
+    fullname: '',
+    email: ''
+  };
+  
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public formBuilder: FormBuilder,
+    private http: Http)
+  {
+    this.user.email = navParams.get('email');
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http) {
-    this.email = navParams.get('email'); 
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SignUpPage');
+    this.signUpUser = this.formBuilder.group({
+      username: ['', Validators.compose([Validators.required])],
+      password: ['', Validators.compose([Validators.required])],
+      fullname: ['']
+    })
   }
 
   test(){
-    console.log(this.email)
+    console.log(this.user)
   }
 
   signUpForm(){

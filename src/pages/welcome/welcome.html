@@ -15,7 +15,7 @@
     <ion-list no-lines>
       <ion-item>
         <ion-label floating>Enter your email address</ion-label>
-        <ion-input formControlName="email" type="text" ([ngModel])="email"></ion-input>
+        <ion-input formControlName="email" type="text" [(ngModel)]="email"></ion-input>
       </ion-item>
       <ion-item *ngIf="!signUpEmail.controls.email.valid && signUpEmail.controls.email.dirty">
         <p>Please enter a valid email address</p>
@@ -23,6 +23,22 @@
     </ion-list>
 
   </form>
+
+<!-- Without validation -->
+  <!-- <form (ngSubmit)="redirectToRegisterPage()">
+    <p>New to THIS APP? Enter your email address</p>
+
+    <ion-list no-lines>
+      <ion-item>
+        <ion-label floating>Enter your email address</ion-label>
+        <ion-input name="email" type="text" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item >
+        <p>Please enter a valid email address</p>
+      </ion-item>
+    </ion-list>
+
+  </form> -->
 
   <br/>
   <br/>

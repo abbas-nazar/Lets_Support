@@ -14,22 +14,21 @@
 
 
 <ion-content padding>
-  <form (ngSubmit)="test()">
-      <ion-item>
-        <ion-label>Username</ion-label>
-        <ion-input type="text" [(ngModel)]="user.username" name="username"></ion-input>
-      </ion-item>
+  <form [formGroup]="signUpUser" (ngSubmit)="test()">
     <ion-item>
-      <ion-label>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>
+      <ion-label floating>Username</ion-label>
+      <ion-input formControlName="username" type="text" [(ngModel)]="user.username" ></ion-input>
+    </ion-item>
+      <!-- <ion-item *ngIf="!signUpUser.controls.email.valid && signUpEmail.controls.email.dirty">
+      <p>Please enter a valid email address</p>
+    </ion-item> -->
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input formControlName="password" type="password" [(ngModel)]="user.password" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Full Name</ion-label>
-      <ion-input type="text" [(ngModel)]="user.fullname" name="fullname"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Email</ion-label>
-      <ion-input type="email" [(ngModel)]="user.email" name="email"></ion-input>
+      <ion-label floating>Date Of Birth</ion-label>
+      <ion-datetime formControlName="fullname" displayFormat="MMM DD, YYYY" [(ngModel)]="user.fullname"></ion-datetime>
     </ion-item>
     <button ion-button type="submit" block>Sign Up</button>
   </form>
