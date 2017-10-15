@@ -6,6 +6,7 @@
  * [ ] Add 'already a member?'
  * [ ] Add validation
  * [ ] Fix pattern validation
+ * [ ] Add cursor on hover to "Already a member? Log in"
  */
 
 import { Component } from '@angular/core';
@@ -14,6 +15,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { FormGroup, FormBuilder, FormControl, Validators } from "@angular/forms"
 import { UsernameValidator } from '../../validators/username'
+
+import { LoginPage } from '../login/login'
 
 @IonicPage()
 @Component({
@@ -84,6 +87,10 @@ export class SignUpPage {
       }
     console.log(this.user)
     console.log(this.results)
+  }
+
+  navToLogin(){
+    this.navCtrl.push(LoginPage)
   }
 
 }

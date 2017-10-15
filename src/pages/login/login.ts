@@ -1,12 +1,14 @@
 /**
  * TODO:
  * [ ] Login with email or username
- * [ ] Password
- * 
+ * [ ] Password check
+ * [ ] Add Forgot password
  */
 
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
+import { TabsPage } from '../tabs/tabs'
 
 /**
  * Generated class for the LoginPage page.
@@ -21,12 +23,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  rememberMe: boolean = false
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+  }
+
+  login() {
+    this.navCtrl.push(TabsPage)
   }
 
 }

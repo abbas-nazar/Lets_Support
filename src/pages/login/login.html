@@ -15,12 +15,12 @@
 
 <ion-content padding>
 
-  <form (submit)="doLogin()">
+  <form (submit)="login()">
       <ion-list>
   
         <ion-item>
-          <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
-          <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+          <ion-label floating>email or username</ion-label>
+          <ion-input type="email"  name="email"></ion-input>
         </ion-item>
   
         <!--
@@ -33,13 +33,18 @@
         -->
   
         <ion-item>
-          <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
-          <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+          <ion-label floating>password</ion-label>
+          <ion-input type="password"  name="password"></ion-input>
         </ion-item>
   
         <div padding>
-          <button ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
+          <button ion-button color="primary" block>Continue</button>
         </div>
+
+        <ion-item>
+            <ion-label>Remember me?</ion-label>
+            <ion-checkbox name="rememberMe" [(ngModel)]="rememberMe"></ion-checkbox>
+        </ion-item>
   
       </ion-list>
     </form>
