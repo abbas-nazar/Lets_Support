@@ -11,6 +11,7 @@ import { LoginPage } from '../pages/login/login'
 import { GoalPage } from '../pages/goal/goal'
 import { PostsPage } from '../pages/posts/posts'
 import { CommunityPage } from '../pages/community/community'
+import { BecomeASupporterPage } from '../pages/become-a-supporter/become-a-supporter'
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -25,13 +26,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     GoalPage,
     PostsPage,
-    CommunityPage
+    CommunityPage,
+    BecomeASupporterPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
-  ],
+    IonicModule.forRoot(MyApp, {
+      tabsPlacement: 'bottom',
+      tabsHideOnSubPages: 'true'
+    },
+  )],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -41,7 +46,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     GoalPage,
     PostsPage,
-    CommunityPage
+    CommunityPage,
+    BecomeASupporterPage
   ],
   providers: [
     StatusBar,

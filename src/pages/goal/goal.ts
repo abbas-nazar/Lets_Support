@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
+
+import { BecomeASupporterPage } from '../become-a-supporter/become-a-supporter'
 
 /**
  * Generated class for the GoalPage page.
@@ -22,4 +24,7 @@ export class GoalPage {
     console.log('ionViewDidLoad GoalPage');
   }
 
+  becomeASupporter(){
+    this.navCtrl.setRoot(BecomeASupporterPage);
+  }
 }
