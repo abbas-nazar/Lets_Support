@@ -20,7 +20,7 @@
 #menu-material {
     .menu-header {
       padding: 5px 15px;
-      background-color: #999;
+      background-color: #768FFF;
     //   background-image: url('../assets/img/misc/material-design-background.jpg');
     //   background-size: cover;
       color: white;
@@ -28,10 +28,10 @@
         font-weight: 500;
         margin-bottom: 3px;
       }
-      .e-mail {
-        margin-top: 0;
-        margin-bottom: 5px;
-      }
+    }
+    .support {
+        cursor: pointer;
+        cursor: hand;
     }
     .user-avatar {
       padding: .5em;
@@ -40,8 +40,8 @@
     h3,
     .label,
     {
-      color: #999;
-      font-weight: 400;
+      color: rgb(0, 0, 0);
+    //   font-weight: 400;
     }
     ion-icon {
       color: #777;
