@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Sign Up</ion-title>
   </ion-navbar>
 
@@ -15,21 +15,37 @@
 
 <ion-content padding>
   <form [formGroup]="signUpUser" (ngSubmit)="test()">
-    <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input formControlName="username" type="text" [(ngModel)]="user.username" ></ion-input>
-    </ion-item>
-      <!-- <ion-item *ngIf="!signUpUser.controls.email.valid && signUpEmail.controls.email.dirty">
-      <p>Please enter a valid email address</p>
-    </ion-item> -->
-    <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input formControlName="password" type="password" [(ngModel)]="user.password" ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>Date Of Birth</ion-label>
-      <ion-datetime formControlName="fullname" displayFormat="MMM DD, YYYY" [(ngModel)]="user.fullname"></ion-datetime>
-    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input formControlName="username" type="text" [(ngModel)]="user.username" ></ion-input>
+      </ion-item>
+
+      <ng-container *ngFor="let validation of validation_messages.username">
+        <ion-item *ngIf="signUpUser.get('username').hasError(validation.type) && (signUpUser.get('username').dirty || signUpUser.get('username').touched)">
+          <p>{{validation.message}}</p>
+        </ion-item>
+      </ng-container>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input formControlName="password" type="password" [(ngModel)]="user.password" ></ion-input>
+      </ion-item>
+
+      <ng-container *ngFor="let validation of validation_messages.password">
+          <ion-item *ngIf="signUpUser.get('password').hasError(validation.type) && (signUpUser.get('password').dirty || signUpUser.get('password').touched)">
+            <p>{{validation.message}}</p>
+          </ion-item>
+        </ng-container>
+
+      <ion-item>
+        <ion-label floating>Date Of Birth</ion-label>
+        <ion-datetime formControlName="fullname" displayFormat="MMM DD, YYYY" [(ngModel)]="user.fullname"></ion-datetime>
+      </ion-item>
+    </ion-list>
+
     <button ion-button type="submit" block>Sign Up</button>
+
   </form>
 </ion-content>

@@ -29,7 +29,7 @@ export class WelcomePage {
 
       //Simple email validation
       this.signUpEmail = this.formBuilder.group({
-        email: ['', Validators.compose([Validators.email, Validators.required])]
+        email: ['', Validators.compose([Validators.email, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'), Validators.required])]
       })
 
   }
