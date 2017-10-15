@@ -15,7 +15,7 @@ export class MyApp {
 
   rootPage:any = TabsPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -26,8 +26,13 @@ export class MyApp {
     });
 
     this.pages = [
-      { title: 'Become A Supporter', component: BecomeASupporterPage },
-      { title: 'Tabs', component: TabsPage }
+      { title: 'Notifications', component: TabsPage, icon: 'home' },
+      { title: 'Goals', component: TabsPage, icon: 'home' },
+      { title: 'Profile', component: TabsPage, icon: 'home' },
+      { title: 'Edit Profile', component: TabsPage, icon: 'home' },
+      { title: 'Cashier', component: TabsPage, icon: 'home' },
+      { title: 'Settings & Privacy', component: TabsPage, icon: 'home' },
+      { title: 'Help Center', component: TabsPage, icon: 'home' }
     ];
 
   }

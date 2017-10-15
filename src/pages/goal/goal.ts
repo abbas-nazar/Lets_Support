@@ -25,6 +25,6 @@ export class GoalPage {
   }
 
   becomeASupporter(){
-    this.navCtrl.setRoot(BecomeASupporterPage);
+    this.navCtrl.push(BecomeASupporterPage);
   }
 }
