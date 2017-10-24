@@ -1,45 +1,44 @@
 <ion-header>
-    <ion-navbar color="primary">
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-title>Goal</ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  <ion-content>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Goal</ion-title>
+  </ion-navbar>
+</ion-header>
 
-    <!-- Header of Goal Section -->
-    <div class="goal-section-header">
-      <div id="profile-info" padding>
-        
-        <ion-grid>
-          <ion-row>
-            <ion-col col-4>
-                <img id="profile-image" [src]="'assets/img/avatar/blank-profile-picture.png'">
+<ion-content>
+
+  <!-- Header of Goal Section -->
+  <div class="goal-section-header">
+    <div id="profile-info" padding>
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+              <img id="profile-image" [src]="currentProfile.picture.medium">
+          </ion-col>
+          <ion-col>
+              <span class="goal-username-and-goal">{{ currentProfile.login.username }}</span>
+              <span class="goal-filling-text">is going to accomplish</span>
+              <span class="goal-username-and-goal" *ngFor="let profil of profile">a goal</span>       
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <br/>
+                <span class="support" menuClose (click)="navToSupporting()">xx Supporting</span>
+                <br/>
+                <br/>
+                <span class="support" menuClose (click)="navToSupporters()">xx Supporters</span>                
             </ion-col>
             <ion-col>
-                <span class="goal-username-and-goal">Paula Bolliger</span>
-                <span class="goal-filling-text">is going to accomplish</span>
-                <span class="goal-username-and-goal" *ngFor="let profil of profile">a goal {{profil. email}}</span>       
+              <button ion-button (click)="becomeASupporter()" color="danger">Become A Supporter!</button>
             </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col>
-                  <br/>
-                  <span class="support" menuClose (click)="navToSupporting()">xx Supporting</span>
-                  <br/>
-                  <br/>
-                  <span class="support" menuClose (click)="navToSupporters()">xx Supporters</span>                
-              </ion-col>
-              <ion-col>
-                <button ion-button (click)="becomeASupporter()" color="danger">Become A Supporter!</button>
-              </ion-col>
-          </ion-row>
-        </ion-grid>
-      
-      </div>
+        </ion-row>
+      </ion-grid>
     </div>
+  </div>
 
   <!-- Goal Description -->
   <div class="goal-description">
@@ -63,7 +62,6 @@
   </div>
 
   <!-- Goal Progression Accordion -->
-
   <ion-list class="accordion-list" no-padding no-lines text-wrap>
     <!-- First Level -->
     <ion-list-header *ngFor="let item of information; let i = index" no-lines no-padding>
@@ -121,7 +119,6 @@
   
           <ion-list *ngIf="child.children && child.open" >
             <!-- Third Level -->
-
             <ion-row *ngFor="let item of child.children; let k = index">
               <ion-col col-2>
                 <ion-item >
@@ -144,9 +141,7 @@
           </ion-list>
         </ion-list>
       </ion-list>
-      
     </ion-list-header>
   </ion-list>
-
 </ion-content>
   

@@ -10,6 +10,8 @@ import 'rxjs/add/operator/map'
 
 import { BecomeASupporterPage } from '../become-a-supporter/become-a-supporter'
 
+// import { Profile } from '../../models/profile'
+import { Profiles } from '../../providers/profiles'
 
 /**
  * Generated class for the GoalPage page.
@@ -26,8 +28,11 @@ import { BecomeASupporterPage } from '../become-a-supporter/become-a-supporter'
 export class GoalPage {
   information: any[]
   profile: any[]
+  currentProfile: any
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http, profiles: Profiles) {
+    // Profiles
+    this.currentProfile = navParams.get('profile') || profiles.defaultProfile
 
     // Goal Progression Accordion
     let localData = http.get('assets/goal.json').map(res => res.json().items)

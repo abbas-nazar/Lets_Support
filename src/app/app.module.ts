@@ -13,9 +13,10 @@ import { PostsPage } from '../pages/posts/posts'
 import { CommunityPage } from '../pages/community/community'
 import { BecomeASupporterPage } from '../pages/become-a-supporter/become-a-supporter'
 
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { Profiles } from '../providers/profiles'
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    Profiles,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
