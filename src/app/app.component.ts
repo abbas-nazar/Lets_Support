@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
-// import { WelcomePage } from '../pages/welcome/welcome'
+import { WelcomePage } from '../pages/welcome/welcome'
 import { BecomeASupporterPage } from '../pages/become-a-supporter/become-a-supporter'
 
 @Component({
@@ -13,7 +13,7 @@ import { BecomeASupporterPage } from '../pages/become-a-supporter/become-a-suppo
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage:any = TabsPage;
+  rootPage:any = WelcomePage;
 
   pages: Array<{title: string, component: any, icon: string}>;
 
@@ -43,11 +43,4 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
-  openSupporters(){
-
-  }
-
-  openSupporting(){
-    
-  }
 }

@@ -1,0 +1,267 @@
+{
+    "items": [
+        {
+            "name": "Develop Back End",
+            "price": "100",
+            "completed": "false",
+            "children": [
+                {
+                    "name": "Develop Sign up function",
+                    "price": "25",
+                    "completed": "true"
+                },
+                {
+                    "name": "Develop Log in",
+                    "price": "25",
+                    "completed": "false",
+                    "children": [
+                        {
+                            "name": "Headers",
+                            "price": "6",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Verification",
+                            "price": "6",
+                            "completed": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "Set up database",
+                    "price": "25",
+                    "completed": "false",
+                    "children": [
+                        {
+                            "name": "Design class diagram",
+                            "price": "6",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Database",
+                            "price": "6",
+                            "completed": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "Set up payment service",
+                    "price": "25",
+                    "completed": "false",
+                    "children": [
+                        {
+                            "name": "Register BrainTree",
+                            "price": "6",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Implement BrainTree",
+                            "price": "6",
+                            "completed": "false"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Develop Front End",
+            "price": "100",
+            "completed": "false",
+            "children": [
+                {
+                    "name": "Develop Welcome page Develop Welcome page Develop Welcome page",
+                    "price": "25",
+                    "completed": "true",
+                    "children": [
+                        {
+                            "name": "Register option",
+                            "price": "10",
+                            "completed": "true"
+                        },
+                        {
+                            "name": "Log in option",
+                            "price": "12",
+                            "completed": "true"
+                        },
+                        {
+                            "name": "Connect to back-end",
+                            "price": "12",
+                            "completed": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "Develop Sign-up page",
+                    "price": "25",
+                    "completed": "false",
+                    "children": [
+                        {
+                            "name": "email, username, password validation",
+                            "price": "13",
+                            "completed": "true"
+                        },
+                        {
+                            "name": "Link to log-in page",
+                            "price": "11",
+                            "completed": "true"
+                        },
+                        {
+                            "name": "Connect to back-end",
+                            "price": "12",
+                            "completed": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "Develop Log-in page",
+                    "price": "25",
+                    "completed": "false",
+                    "children": [
+                        {
+                            "name": "Username and password input fields",
+                            "price": "25",
+                            "completed": "true"
+                        },
+                        {
+                            "name": "Connect with back-end",
+                            "price": "19.99",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Password forgotten",
+                            "price": "19.99",
+                            "completed": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "Develop Goal page",
+                    "price": "25",
+                    "completed": "false",
+                    "children": [
+                        {
+                            "name": "Goal statement",
+                            "price": "25",
+                            "completed": "true"
+                        },
+                        {
+                            "name": "Goal description with sharing possibilities",
+                            "price": "19.99",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Goal accordion, with checkboxes and goal description",
+                            "price": "19.99",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Edit modus",
+                            "price": "19.99",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Connect with back-end",
+                            "price": "19.99",
+                            "completed": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "Develop Posts page",
+                    "price": "25",
+                    "completed": "false",
+                    "children": [
+                        {
+                            "name": "Post layout",
+                            "price": "25",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Connect with back-end",
+                            "price": "19.99",
+                            "completed": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "Develop Create new post",
+                    "price": "25",
+                    "completed": "false",
+                    "children": [
+                        {
+                            "name": "Kind of post - text/pic/vid",
+                            "price": "25",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Connect with back-end",
+                            "price": "19.99",
+                            "completed": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "Develop profile page",
+                    "price": "25",
+                    "completed": "false",
+                    "children": [
+                        {
+                            "name": "Profile details",
+                            "price": "25",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Edit mode",
+                            "price": "25",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Connect with back-end",
+                            "price": "19.99",
+                            "completed": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "Become a Supporter",
+                    "price": "25",
+                    "completed": "false",
+                    "children": [
+                        {
+                            "name": "Pages",
+                            "price": "25",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Payment",
+                            "price": "25",
+                            "completed": "false"
+                        },
+                        {
+                            "name": "Connect with back-end",
+                            "price": "19.99",
+                            "completed": "false"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Set up the business",
+            "price": "100",
+            "completed": "false",
+            "children": [
+                {
+                    "name": "Design the business plan",
+                    "price": "25",
+                    "completed": "false"
+                },
+                {
+                    "name": "Execute business plan",
+                    "price": "19.99",
+                    "completed": "false"
+                }
+            ]
+        }
+    ]
+}
