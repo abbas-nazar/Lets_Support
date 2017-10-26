@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavParams } from 'ionic-angular';
+
 
 import { GoalPage } from '../goal/goal';
 import { PostsPage } from '../posts/posts';
@@ -13,7 +15,10 @@ export class TabsPage {
   tab2Root = PostsPage;
   tab3Root = CommunityPage;
 
-  constructor() {
+  currentUserFromLogin: any
+
+  constructor(public navParams: NavParams) {
+    this.currentUserFromLogin = navParams.get('currentUserFromLogin')
 
   }
 }
