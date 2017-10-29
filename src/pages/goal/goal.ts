@@ -29,16 +29,21 @@ export class GoalPage {
   information: any[]
   profile: any[]
   currentProfile: any
+  currentProfileGoals: any[]
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http, profiles: Profiles) {
     // Profiles
     this.currentProfile = navParams.data || profiles.defaultProfile
+    this.currentProfileGoals = this.currentProfile.goals[0]
+    this.information = this.currentProfile.goals[0].items
+    
+    // this.information = this.currentProfileGoals.items    
 
     // Goal Progression Accordion
-    let localData = http.get('assets/goal.json').map(res => res.json().items)
-    localData.subscribe(data => {
-      this.information = data;
-    })
+      // let localData = http.get('assets/goal.json').map(res => res.json().items)
+      // localData.subscribe(data => {
+      //   this.information = data;
+      // })
 
   }
 
@@ -46,7 +51,11 @@ export class GoalPage {
 
   becomeASupporter() {
     // this.navCtrl.push(BecomeASupporterPage);
-    console.log(this.currentProfile)
+    // this.currentProfileGoals = this.currentProfile.goals[0]
+    // console.log(this.currentProfile.goals[0])
+    
+    console.log(this.information)
+    // console.log(this.currentProfile.find(value => value.nat === 'TR').goals)
   }
 
   navToSupporting() {

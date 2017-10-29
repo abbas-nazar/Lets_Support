@@ -20,8 +20,8 @@
           </ion-col>
           <ion-col>
               <span class="goal-username-and-goal">{{ currentProfile.login.username }}</span>
-              <span class="goal-filling-text">is going to accomplish</span>
-              <span class="goal-username-and-goal" *ngFor="let profil of profile">a goal</span>       
+              <span class="goal-filling-text">is going to </span>
+              <span class="goal-username-and-goal">{{ currentProfileGoals.goal }}</span>       
           </ion-col>
         </ion-row>
         <ion-row>
@@ -47,7 +47,7 @@
         Description of Goal
       </ion-card-header>
       <ion-card-content>
-        Lorem ipsum
+        {{ currentProfileGoals.goaldescription }}
       </ion-card-content>
 
       <ion-row no-padding>

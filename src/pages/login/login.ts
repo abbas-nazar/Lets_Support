@@ -46,15 +46,7 @@ export class LoginPage {
     this.currentProfile = this.profiles.query()    
 
     this.navCtrl.push(TabsPage, {
-      currentUserFromLogin : this.currentProfile[1]    
-    })
-  }
-
-  print() {
-    this.currentProfile = this.profiles.query()    
-  
-    this.navCtrl.push(BecomeASupporterPage, {
-      currentUserFromLogin: this.currentProfile[1]
+      currentUserFromLogin : this.currentProfile[0]    
     })
   }
 
