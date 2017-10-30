@@ -14,6 +14,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'posts.html',
 })
 export class PostsPage {
+  currentProfile: any
+  currentProfilePosts: any[]
 
   posts = [
     {
@@ -52,6 +54,9 @@ export class PostsPage {
   ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.currentProfile = navParams.data //|| profiles.defaultProfile
+    this.currentProfilePosts = this.currentProfile.posts
+    
   }
 
   ionViewDidLoad() {

@@ -9,6 +9,7 @@ import { Http } from '@angular/http'
 import 'rxjs/add/operator/map'
 
 import { BecomeASupporterPage } from '../become-a-supporter/become-a-supporter'
+import { SupportingPage } from '../supporting/supporting'
 
 // import { Profile } from '../../models/profile'
 import { Profiles } from '../../providers/profiles'
@@ -33,7 +34,7 @@ export class GoalPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http, profiles: Profiles) {
     // Profiles
-    this.currentProfile = navParams.data || profiles.defaultProfile
+    this.currentProfile = navParams.data //|| profiles.defaultProfile
     this.currentProfileGoals = this.currentProfile.goals[0]
     this.information = this.currentProfile.goals[0].items
     
@@ -59,7 +60,9 @@ export class GoalPage {
   }
 
   navToSupporting() {
-
+    this.navCtrl.push(SupportingPage, {
+      currentUserFromLogin: this.currentProfile
+    })
   }
 
   navToSupporters() {

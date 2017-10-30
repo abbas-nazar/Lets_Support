@@ -8,7 +8,7 @@
  */
 
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController  } from 'ionic-angular';
 
 import { TabsPage } from '../tabs/tabs'
 
@@ -35,7 +35,7 @@ export class LoginPage {
   rememberMe: boolean = false
   currentProfile: any[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public profiles: Profiles) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public profiles: Profiles) {
   }
 
   ionViewDidLoad() {
@@ -43,7 +43,13 @@ export class LoginPage {
   }
 
   login() {
-    this.currentProfile = this.profiles.query()    
+    this.currentProfile = this.profiles.query()
+    
+    // let loader = this.loadingCtrl.create({
+    //   content: "Please wait...",
+    //   duration: 3000
+    // });
+    // loader.present();
 
     this.navCtrl.push(TabsPage, {
       currentUserFromLogin : this.currentProfile[0]    

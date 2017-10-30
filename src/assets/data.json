@@ -308,7 +308,7 @@
         ]
         }
       ],
-      "supporters":[
+      "supporting":[
         {
           "username": "lazyleopard931",
           "goals": [
@@ -349,7 +349,39 @@
           ]
         }
       ],
-      "supporting":{}
+      "supporters":{},
+      "posts": [
+        {
+          "name": "",      
+          "postImageUrl": "",
+          "profileImage": "",
+          "text": "Side menu working.",
+          "date": "October 20, 2017",
+          "likes": 0,
+          "comments": 0,
+          "timestamp": "10d ago"
+        },
+        {
+          "name": "",      
+          "profileImage": "",
+          "postImageUrl": "",
+          "text": "Login & Signup page finished.",
+          "date": "October 10, 2017",
+          "likes": 0,
+          "comments": 0,
+          "timestamp": "30d ago"
+        },
+        {
+          "name": "",      
+          "profileImage": "",
+          "postImageUrl": "assets/img/posts/capture.png",
+          "date": "October 2, 2017",
+          "likes": 0,
+          "text": "Welcome page finished.",
+          "comments": 0,
+          "timestamp": "1mo ago"
+        }
+      ]
     },
     {
       "gender":"female",

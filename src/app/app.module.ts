@@ -12,6 +12,7 @@ import { GoalPage } from '../pages/goal/goal'
 import { PostsPage } from '../pages/posts/posts'
 import { CommunityPage } from '../pages/community/community'
 import { BecomeASupporterPage } from '../pages/become-a-supporter/become-a-supporter'
+import { SupportingPage } from '../pages/supporting/supporting'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -28,7 +29,8 @@ import { Profiles } from '../providers/profiles'
     GoalPage,
     PostsPage,
     CommunityPage,
-    BecomeASupporterPage
+    BecomeASupporterPage,
+    SupportingPage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ import { Profiles } from '../providers/profiles'
     GoalPage,
     PostsPage,
     CommunityPage,
-    BecomeASupporterPage
+    BecomeASupporterPage,
+    SupportingPage
   ],
   providers: [
     StatusBar,
