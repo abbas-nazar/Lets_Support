@@ -55,7 +55,11 @@ export class GoalPage {
     // this.currentProfileGoals = this.currentProfile.goals[0]
     // console.log(this.currentProfile.goals[0])
     
-    console.log(this.information)
+    this.navCtrl.push(BecomeASupporterPage, {
+      currentUserFromLogin: this.currentProfile
+    });
+
+    // console.log(this.information)
     // console.log(this.currentProfile.find(value => value.nat === 'TR').goals)
   }
 
@@ -66,6 +70,10 @@ export class GoalPage {
   }
 
   navToSupporters() {
+
+  }
+
+  navToGoal() {
 
   }
 

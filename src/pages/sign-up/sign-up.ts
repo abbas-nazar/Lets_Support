@@ -75,10 +75,6 @@ export class SignUpPage {
     })
   }
 
-  test(){
-    console.log(this.user)
-  }
-
   signUpForm(){
     this.http.post('https://cyberbuz101.appspot.com/users/signup', this.user)
       .subscribe(data => this.results = data)
@@ -87,6 +83,7 @@ export class SignUpPage {
       }
     console.log(this.user)
     console.log(this.results)
+    this.navCtrl.push(LoginPage)
   }
 
   navToLogin(){

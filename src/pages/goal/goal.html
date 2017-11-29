@@ -20,23 +20,21 @@
           </ion-col>
           <ion-col>
               <span class="goal-username-and-goal">{{ currentProfile.login.username }}</span>
-              <span class="goal-filling-text">is going to </span>
-              <span class="goal-username-and-goal">{{ currentProfileGoals.goal }}</span>       
+              <br/>
+              <span class="goal-filling-text">{{ currentProfile.name.first }} {{ currentProfile.name.last }} </span>
+              <!-- <span class="goal-username-and-goal">{{ currentProfileGoals.goal }}</span> -->
           </ion-col>
         </ion-row>
         <ion-row>
             <ion-col>
-                <br/>
                 <span class="support" menuClose (click)="navToSupporting()">3 Supporting</span>
-                <br/>
-                <br/>
-                <span class="support" menuClose (click)="navToSupporters()">0 Supporters</span>                
             </ion-col>
             <ion-col>
-              <button ion-button (click)="becomeASupporter()" color="danger">Become A Supporter!</button>
+                <span class="support" menuClose (click)="navToSupporters()">0 Supporters</span>                
             </ion-col>
         </ion-row>
       </ion-grid>
+      <button ion-button (click)="becomeASupporter()" color="danger" block>Support {{ currentProfile.login.username }}</button>
     </div>
   </div>
 
@@ -44,10 +42,10 @@
   <div class="goal-description">
     <ion-card>
       <ion-card-header>
-        Description of Goal
+        {{ currentProfile.login.username }} dedicates to
       </ion-card-header>
       <ion-card-content>
-        {{ currentProfileGoals.goaldescription }}
+        <span class="link" (click)="navToGoal()"><u>{{ currentProfileGoals.goal }}</u></span>
       </ion-card-content>
 
       <ion-row no-padding>

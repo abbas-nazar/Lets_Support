@@ -31,7 +31,12 @@ page-goal {
       color: #fff;
       cursor: pointer;
       cursor: hand;
-  }
+    }
+    
+    .link {
+      cursor: pointer;
+      // cursor: hand;
+    }
 
   // Goal Description 
   #goal-description {

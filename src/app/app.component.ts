@@ -24,7 +24,7 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
-
+    
     this.pages = [
       { title: 'Notifications', component: TabsPage, icon: 'home' },
       { title: 'Goals', component: TabsPage, icon: 'home' },

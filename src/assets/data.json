@@ -4,8 +4,8 @@
       "gender":"male",
       "name":{
         "title":"mr",
-        "first":"onur",
-        "last":"taşlı"
+        "first":"Barry",
+        "last":"Kamawiwo'ole"
       },
       "location":{
         "street":"4060 istiklal cd",
@@ -15,7 +15,7 @@
       },
       "email":"onur.taşlı@example.com",
       "login":{
-        "username":"ticklishleopard690",
+        "username":"AppleJuice",
         "password":"grateful",
         "salt":"xhE7hP65",
         "md5":"d1478c1b0f6108ad4c627127786837bb",
@@ -39,273 +39,214 @@
       "goals":[
         {
           "id": "0",
-          "goal": "to develop this app",
-          "goaldescription": "Before this app can be brought to the market, it needs to be developed and the business has to be set up. For this, several milestones have been setup. When these milestones are compeleted the tasks is ready to go life.",
+          "goal": "Run the New York marathon 2018",
+          "goaldescription": "This is an example of a goal which is used to test this app. In this case the achiever is going to do the necessary things to compete and finish in the New York marathon of 2018.",
           "items": [
             {
-              "name": "Develop Back End",
+              "name": "Register for the marathon",
               "price": "100",
+              "completed": "false"
+            },
+            {
+              "name": "Buy necessities",
+              "price": "50",
               "completed": "false",
               "children": [
                 {
-                  "name": "Develop Sign up function",
+                  "name": "Flight ticket",
                   "price": "25",
                   "completed": "true"
                 },
                 {
-                  "name": "Develop Log in",
+                  "name": "Book place to stay",
+                  "price": "25",
+                  "completed": "true"
+                },
+                {
+                  "name": "New running gear",
+                  "price": "25",
+                  "completed": "true"
+                },
+                {
+                  "name": "Nutrition",
+                  "price": "25",
+                  "completed": "true"
+                }
+              ]
+            },
+            {
+              "name": "Training",
+              "price": "500",
+              "completed": "false",
+              "children": [
+                {
+                  "name": "Training week 1",
                   "price": "25",
                   "completed": "false",
                   "children": [
                     {
-                      "name": "Headers",
-                      "price": "6",
-                      "completed": "false"
+                      "name": "Run 10 kilometers",
+                      "price": "10",
+                      "completed": "true"
                     },
                     {
-                      "name": "Verification",
-                      "price": "6",
-                      "completed": "false"
+                      "name": "Run 15 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Run 20 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Run 35 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Weight training",
+                      "price": "10",
+                      "completed": "true"
                     }
                   ]
                 },
                 {
-                  "name": "Set up database",
+                  "name": "Training week 2",
                   "price": "25",
                   "completed": "false",
                   "children": [
                     {
-                      "name": "Design class diagram",
-                      "price": "6",
-                      "completed": "false"
+                      "name": "Run 10 kilometers",
+                      "price": "10",
+                      "completed": "true"
                     },
                     {
-                      "name": "Database",
-                      "price": "6",
-                      "completed": "false"
+                      "name": "Run 15 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Run 20 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Run 35 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Weight training",
+                      "price": "10",
+                      "completed": "true"
                     }
                   ]
                 },
                 {
-                  "name": "Set up payment service",
+                  "name": "Training week 3",
                   "price": "25",
                   "completed": "false",
                   "children": [
                     {
-                        "name": "Register BrainTree",
-                        "price": "6",
-                        "completed": "false"
+                      "name": "Run 10 kilometers",
+                      "price": "10",
+                      "completed": "true"
                     },
                     {
-                        "name": "Implement BrainTree",
-                        "price": "6",
-                        "completed": "false"
+                      "name": "Run 15 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Run 20 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Run 35 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Weight training",
+                      "price": "10",
+                      "completed": "true"
+                    }
+                  ]
+                },
+                {
+                  "name": "Training week 4",
+                  "price": "25",
+                  "completed": "false",
+                  "children": [
+                    {
+                      "name": "Run 10 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Run 15 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Run 20 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Run 35 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Weight training",
+                      "price": "10",
+                      "completed": "true"
+                    }
+                  ]
+                },
+                {
+                  "name": "Training week 5",
+                  "price": "25",
+                  "completed": "false",
+                  "children": [
+                    {
+                      "name": "Run 10 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Run 15 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Run 20 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Run 35 kilometers",
+                      "price": "10",
+                      "completed": "true"
+                    },
+                    {
+                      "name": "Weight training",
+                      "price": "10",
+                      "completed": "true"
                     }
                   ]
                 }
               ]
             },
             {
-                "name": "Develop Front End",
-                "price": "100",
-                "completed": "false",
-                "children": [
-                    {
-                        "name": "Develop Welcome page Develop Welcome page Develop Welcome page",
-                        "price": "25",
-                        "completed": "true",
-                        "children": [
-                            {
-                                "name": "Register option",
-                                "price": "10",
-                                "completed": "true"
-                            },
-                            {
-                                "name": "Log in option",
-                                "price": "12",
-                                "completed": "true"
-                            },
-                            {
-                                "name": "Connect to back-end",
-                                "price": "12",
-                                "completed": "false"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Develop Sign-up page",
-                        "price": "25",
-                        "completed": "false",
-                        "children": [
-                            {
-                                "name": "email, username, password validation",
-                                "price": "13",
-                                "completed": "true"
-                            },
-                            {
-                                "name": "Link to log-in page",
-                                "price": "11",
-                                "completed": "true"
-                            },
-                            {
-                                "name": "Connect to back-end",
-                                "price": "12",
-                                "completed": "false"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Develop Log-in page",
-                        "price": "25",
-                        "completed": "false",
-                        "children": [
-                            {
-                                "name": "Username and password input fields",
-                                "price": "25",
-                                "completed": "true"
-                            },
-                            {
-                                "name": "Connect with back-end",
-                                "price": "19.99",
-                                "completed": "false"
-                            },
-                            {
-                                "name": "Password forgotten",
-                                "price": "19.99",
-                                "completed": "false"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Develop Goal page",
-                        "price": "25",
-                        "completed": "false",
-                        "children": [
-                            {
-                                "name": "Goal statement",
-                                "price": "25",
-                                "completed": "true"
-                            },
-                            {
-                                "name": "Goal description with sharing possibilities",
-                                "price": "19.99",
-                                "completed": "false"
-                            },
-                            {
-                                "name": "Goal accordion, with checkboxes and goal description",
-                                "price": "19.99",
-                                "completed": "false"
-                            },
-                            {
-                                "name": "Edit modus",
-                                "price": "19.99",
-                                "completed": "false"
-                            },
-                            {
-                                "name": "Connect with back-end",
-                                "price": "19.99",
-                                "completed": "false"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Develop Posts page",
-                        "price": "25",
-                        "completed": "false",
-                        "children": [
-                            {
-                                "name": "Post layout",
-                                "price": "25",
-                                "completed": "false"
-                            },
-                            {
-                                "name": "Connect with back-end",
-                                "price": "19.99",
-                                "completed": "false"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Develop Create new post",
-                        "price": "25",
-                        "completed": "false",
-                        "children": [
-                            {
-                                "name": "Kind of post - text/pic/vid",
-                                "price": "25",
-                                "completed": "false"
-                            },
-                            {
-                                "name": "Connect with back-end",
-                                "price": "19.99",
-                                "completed": "false"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Develop profile page",
-                        "price": "25",
-                        "completed": "false",
-                        "children": [
-                            {
-                                "name": "Profile details",
-                                "price": "25",
-                                "completed": "false"
-                            },
-                            {
-                                "name": "Edit mode",
-                                "price": "25",
-                                "completed": "false"
-                            },
-                            {
-                                "name": "Connect with back-end",
-                                "price": "19.99",
-                                "completed": "false"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Become a Supporter",
-                        "price": "25",
-                        "completed": "false",
-                        "children": [
-                            {
-                                "name": "Pages",
-                                "price": "25",
-                                "completed": "false"
-                            },
-                            {
-                                "name": "Payment",
-                                "price": "25",
-                                "completed": "false"
-                            },
-                            {
-                                "name": "Connect with back-end",
-                                "price": "19.99",
-                                "completed": "false"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "Set up the business",
-                "price": "100",
-                "completed": "false",
-                "children": [
-                    {
-                        "name": "Design the business plan",
-                        "price": "25",
-                        "completed": "false"
-                    },
-                    {
-                        "name": "Execute business plan",
-                        "price": "19.99",
-                        "completed": "false"
-                    }
-                ]
+              "name": "Finish top 20",
+              "price": "200",
+              "completed": "false"
             }
-        ]
+          ]
         }
       ],
       "supporting":[
@@ -355,7 +296,7 @@
           "name": "",      
           "postImageUrl": "",
           "profileImage": "",
-          "text": "Side menu working.",
+          "text": "Registered for the marathon!",
           "date": "October 20, 2017",
           "likes": 0,
           "comments": 0,
@@ -365,7 +306,7 @@
           "name": "",      
           "profileImage": "",
           "postImageUrl": "",
-          "text": "Login & Signup page finished.",
+          "text": "Ran my first 10 kilometers of this training. With minor injuries :(",
           "date": "October 10, 2017",
           "likes": 0,
           "comments": 0,
@@ -374,10 +315,10 @@
         {
           "name": "",      
           "profileImage": "",
-          "postImageUrl": "assets/img/posts/capture.png",
+          "postImageUrl": "assets/img/posts/cheap-flight-ticket.png",
           "date": "October 2, 2017",
           "likes": 0,
-          "text": "Welcome page finished.",
+          "text": "Bought the flight tickets!",
           "comments": 0,
           "timestamp": "1mo ago"
         }

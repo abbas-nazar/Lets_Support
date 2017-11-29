@@ -14,12 +14,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'become-a-supporter.html',
 })
 export class BecomeASupporterPage {
+  currentUser: any
+  goals: any[]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.currentUser = navParams.get('currentUserFromLogin')
+    this.goals = this.currentUser.goals
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BecomeASupporterPage');
   }
+
 
 }

@@ -17,5 +17,27 @@
 
 
 <ion-content padding>
+  Support {{ currentUser.name.first }} {{ currentUser.name.last }} to {{ goals[0].goal }}
+
+  <form (submit)="submitSupport()">
+    <ion-list>
+      <ion-item>
+        <ion-label >Amount</ion-label>
+        <ion-input type="number"  name="amount"></ion-input>
+      </ion-item>
+    </ion-list>
+
+  Which percentage of this amount would you like {{ currentUser.name.first }} to receive only when reaching the end goal?
+
+    <ion-item>
+        <ion-range min="0" max="100" color="primary">
+          <ion-label range-left>0</ion-label>
+          <ion-label range-right>100</ion-label>
+        </ion-range>
+      </ion-item>
+    
+    <button ion-button type="submit" placeholder="0.00" block color="danger">Submit support</button>
+
+  </form>
 
 </ion-content>
