@@ -4,8 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import { BecomeASupporterPage } from '../pages/become-a-supporter/become-a-supporter'
-import { MainGoalPage } from '../pages/main-goal/main-goal'
 
 @Component({
   templateUrl: 'app.html'
@@ -17,17 +15,19 @@ export class MyApp {
 
   pages: Array<{title: string, component: any, icon: string}>;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
+  constructor(platform: Platform,
+    statusBar: StatusBar,
+    splashScreen: SplashScreen) {
+      platform.ready().then(() => {
+        // Okay, so the platform is ready and our plugins are available.
+        // Here you can do any higher level native things you might need.
+        statusBar.styleDefault();
+        splashScreen.hide();
     });
     
     this.pages = [
       { title: 'Notifications', component: TabsPage, icon: 'home' },
-      { title: 'Goals', component: MainGoalPage, icon: 'home' },
+      { title: 'Goals', component: 'MainGoalPage', icon: 'home' },
       { title: 'Profile', component: TabsPage, icon: 'home' },
       { title: 'Edit Profile', component: TabsPage, icon: 'home' },
       { title: 'Cashier', component: TabsPage, icon: 'home' },

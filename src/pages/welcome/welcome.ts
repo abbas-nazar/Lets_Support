@@ -7,11 +7,8 @@
 
 import { Component } from '@angular/core'
 import { IonicPage, NavController, NavParams } from 'ionic-angular'
+import { FormGroup, FormBuilder, FormControl, Validators } from "@angular/forms"
 
-import {FormGroup, FormBuilder, FormControl, Validators} from "@angular/forms"
-
-import { TabsPage } from '../tabs/tabs'
-import { LoginPage } from '../login/login'
 
 @IonicPage()
 @Component({
@@ -36,7 +33,7 @@ export class WelcomePage {
 
   //Login navigation
   continueButton(){
-    this.navCtrl.push(LoginPage)
+    this.navCtrl.push('LoginPage')
   }
 
   redirectToRegisterPage(){

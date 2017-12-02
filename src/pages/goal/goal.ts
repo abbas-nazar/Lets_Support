@@ -8,8 +8,6 @@ import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 import { Http } from '@angular/http'
 import 'rxjs/add/operator/map'
 
-import { SupportingPage } from '../supporting/supporting'
-import { MainGoalPage } from '../main-goal/main-goal'
 
 // import { Profile } from '../../models/profile'
 import { Profiles } from '../../providers/profiles'
@@ -64,7 +62,7 @@ export class GoalPage {
   }
 
   navToSupporting() {
-    this.navCtrl.push(SupportingPage, {
+    this.navCtrl.push('SupportingPage', {
       currentUserFromLogin: this.currentProfile
     })
   }
@@ -74,7 +72,7 @@ export class GoalPage {
   }
 
   navToGoal() {
-    this.navCtrl.push(MainGoalPage)
+    this.navCtrl.push('MainGoalPage')
   }
 
   // Goal Progression Accordion
