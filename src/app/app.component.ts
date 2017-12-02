@@ -4,7 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import { WelcomePage } from '../pages/welcome/welcome'
 import { BecomeASupporterPage } from '../pages/become-a-supporter/become-a-supporter'
 import { MainGoalPage } from '../pages/main-goal/main-goal'
 
@@ -14,7 +13,7 @@ import { MainGoalPage } from '../pages/main-goal/main-goal'
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage:any = WelcomePage;
+  rootPage: string = 'WelcomePage';
 
   pages: Array<{title: string, component: any, icon: string}>;
 

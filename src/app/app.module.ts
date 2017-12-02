@@ -5,12 +5,10 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import { WelcomePage } from '../pages/welcome/welcome';
 import { LoginPage } from '../pages/login/login'
 import { GoalPage } from '../pages/goal/goal'
 import { PostsPage } from '../pages/posts/posts'
 import { CommunityPage } from '../pages/community/community'
-import { BecomeASupporterPage } from '../pages/become-a-supporter/become-a-supporter'
 import { SupportingPage } from '../pages/supporting/supporting'
 import { MainGoalPage } from '../pages/main-goal/main-goal'
 
@@ -23,12 +21,10 @@ import { Profiles } from '../providers/profiles'
   declarations: [
     MyApp,
     TabsPage,
-    WelcomePage,
     LoginPage,
     GoalPage,
     PostsPage,
     CommunityPage,
-    BecomeASupporterPage,
     SupportingPage,
     MainGoalPage
   ],
@@ -44,12 +40,10 @@ import { Profiles } from '../providers/profiles'
   entryComponents: [
     MyApp,
     TabsPage,
-    WelcomePage,
     LoginPage,
     GoalPage,
     PostsPage,
     CommunityPage,
-    BecomeASupporterPage,
     SupportingPage,
     MainGoalPage
   ],

@@ -8,7 +8,6 @@ import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 import { Http } from '@angular/http'
 import 'rxjs/add/operator/map'
 
-import { BecomeASupporterPage } from '../become-a-supporter/become-a-supporter'
 import { SupportingPage } from '../supporting/supporting'
 import { MainGoalPage } from '../main-goal/main-goal'
 
@@ -56,7 +55,7 @@ export class GoalPage {
     // this.currentProfileGoals = this.currentProfile.goals[0]
     // console.log(this.currentProfile.goals[0])
     
-    this.navCtrl.push(BecomeASupporterPage, {
+    this.navCtrl.push('BecomeASupporterPage', {
       currentUserFromLogin: this.currentProfile
     });
 
