@@ -14,37 +14,33 @@
 
 
 <ion-content padding>
-  <form (submit)="login()">
-      <ion-list>
-  
-        <ion-item>
-          <ion-label floating>email or username</ion-label>
-          <ion-input type="email"  name="email"></ion-input>
-        </ion-item>
-  
-        <!--
-        Want to use a Username instead of an Email? Here you go:
-  
-        <ion-item>
-          <ion-label floating>{{ 'USERNAME' | translate }}</ion-label>
-          <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
-        </ion-item>
-        -->
-  
-        <ion-item>
-          <ion-label floating>password</ion-label>
-          <ion-input type="password"  name="password"></ion-input>
-        </ion-item>
-  
-        <div padding>
-          <button ion-button color="primary" block>Continue</button>
-        </div>
+  <ion-card>
+    <form (submit)="login()">
+        <ion-list>
+    
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="email"  name="email"></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password"  name="password"></ion-input>
+          </ion-item>
+    
+          <div padding>
+            <button ion-button color="primary" block>Log in</button>
+          </div>
 
-        <ion-item>
-            <ion-label>Remember me?</ion-label>
-            <ion-checkbox name="rememberMe" [(ngModel)]="rememberMe"></ion-checkbox>
-        </ion-item>
-  
-      </ion-list>
-    </form>
+          <ion-item>
+              <ion-label>Remember me?</ion-label>
+              <ion-checkbox name="rememberMe" [(ngModel)]="rememberMe"></ion-checkbox>
+          </ion-item>
+    
+        </ion-list>
+      </form>
+    </ion-card>
+    <hr/>
+    Don't have an account?
+    <button ion-button block (click)="navigateToSignUp()">Sign Up</button>
 </ion-content>

@@ -9,15 +9,8 @@
 
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController  } from 'ionic-angular';
-
 import { TabsPage } from '../tabs/tabs'
-
 import { Profiles } from '../../providers/profiles'
-
-// To test navparam
-import { BecomeASupporterPage } from '../become-a-supporter/become-a-supporter'
-
-
 
 /**
  * Generated class for the LoginPage page.
@@ -35,25 +28,24 @@ export class LoginPage {
   rememberMe: boolean = false
   currentProfile: any[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, public profiles: Profiles) {
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public loadingCtrl: LoadingController,
+    public profiles: Profiles) {
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage'); 
-  }
+    }
 
   login() {
     this.currentProfile = this.profiles.query()
-    
-    // let loader = this.loadingCtrl.create({
-    //   content: "Please wait...",
-    //   duration: 3000
-    // });
-    // loader.present();
 
     this.navCtrl.push(TabsPage, {
       currentUserFromLogin : this.currentProfile[0]    
     })
+  }
+
+  navigateToSignUp(){
+    this.navCtrl.push('SignUpPage')
   }
 
 }

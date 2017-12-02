@@ -1,22 +1,18 @@
 /**
  * TODO:
- * [ ] Change in HTML form function from test to signUpForm
- * [ ] Add date of birth
+ * [X] Change in HTML form function from test to signUpForm
+ * [X] Add date of birth
  * [ ] Add terms
- * [ ] Add 'already a member?'
- * [ ] Add validation
- * [ ] Fix pattern validation
+ * [X] Add 'already a member?'
+ * [X] Add validation
+ * [X] Fix pattern validation
  * [ ] Add cursor on hover to "Already a member? Log in"
  */
 
 import { Component } from '@angular/core';
 import { Http } from '@angular/http'
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
 import { FormGroup, FormBuilder, FormControl, Validators } from "@angular/forms"
-import { UsernameValidator } from '../../validators/username'
-
-import { LoginPage } from '../login/login'
 
 @IonicPage()
 @Component({
@@ -26,25 +22,32 @@ import { LoginPage } from '../login/login'
 export class SignUpPage {
   results: any = "nope"
   signUpUser: FormGroup
-  user: { username: string, password: string, fullname: string, email: string } = {
-    username: '',
+  user: { name: string, password: string, dateofbirth: string, email: string } = {
+    name: '',
     password: '',
-    fullname: '',
+    dateofbirth: '',
     email: ''
   }
 
   validation_messages = {
-    'username': [
-        { type: 'required', message: 'Username is required.' },
-        { type: 'minlength', message: 'Username must be at least 5 characters long.' },
-        { type: 'maxlength', message: 'Username cannot be more than 25 characters long.' },
-        { type: 'pattern', message: 'Your username must contain only numbers and letters.' },
-        { type: 'validUsername', message: 'Your username has already been taken.' }
+    'name': [
+        { type: 'required', message: 'Name is required.' },
+        { type: 'minlength', message: 'Name must be at least 3 characters long.' },
+        { type: 'maxlength', message: 'Name cannot be more than 50 characters long.' },
+        { type: 'pattern', message: 'Your name must contain only numbers and letters.' }
+      ],
+      'email': [
+        { type: 'required', message: 'Email is required.' },
+        { type: 'pattern', message: 'Please enter a valid email.'},
+        { type: 'validEmail', message: 'This email ahs already been taken.'}
       ],
       'password': [
-        { type: 'required', message: 'Name is required.' },
+        { type: 'required', message: 'Password is required.' },
         { type: 'minlength', message: 'Password must be at least 8 characters long.'},
         { type: 'pattern', message: 'Password must contain small letters, capital letters and numbers'}
+      ],
+      'dateofbirth': [
+        { type: 'required', message: 'Please fill in your date of birth.'}
       ]
     }
   
@@ -54,40 +57,48 @@ export class SignUpPage {
     public formBuilder: FormBuilder,
     private http: Http)
   {
-    //Getting email from previous page
-    this.user.email = navParams.get('email');
 
     //Validators
     this.signUpUser = this.formBuilder.group({
-      username: ['', Validators.compose([
-        Validators.maxLength(25),
-        Validators.minLength(5),
-        Validators.pattern('^[a-zA-Z0-9]+$'),
-        // UsernameValidator.checkUsername,
+      email: ['', Validators.compose([
+        Validators.email,
+        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'),
+        Validators.required
+      ])],
+      name: ['', Validators.compose([
+        Validators.maxLength(50),
+        Validators.minLength(3),
+        Validators.pattern('^[a-zA-Z ]+$'),
         Validators.required
       ])],
       password: ['', Validators.compose([
         Validators.minLength(8),
-        Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$'),
+        Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9 !@#\$%\^&\*]+$'),
         Validators.required
       ])],
-      fullname: ['']
+      dateofbirth: ['', Validators.compose([
+        Validators.required
+      ])]
     })
   }
 
   signUpForm(){
-    this.http.post('https://cyberbuz101.appspot.com/users/signup', this.user)
+
+    if(this.signUpUser.valid){
+      this.http.post('https://cyberbuz101.appspot.com/users/signup', this.user)
       .subscribe(data => this.results = data)
       , error => {
         console.log(error)
       }
     console.log(this.user)
     console.log(this.results)
-    this.navCtrl.push(LoginPage)
+    this.navCtrl.push('LoginPage')
+    }
+    
   }
 
   navToLogin(){
-    this.navCtrl.push(LoginPage)
+    this.navCtrl.push('LoginPage')
   }
 
 }

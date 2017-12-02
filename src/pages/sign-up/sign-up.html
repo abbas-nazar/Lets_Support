@@ -1,9 +1,3 @@
-<!--
-  Generated template for the SignUpPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar color="primary">
@@ -17,15 +11,21 @@
   <form [formGroup]="signUpUser" (ngSubmit)="signUpForm()">
 
     <ion-list>
+
       <ion-item>
-        <ion-label floating>Username</ion-label>
-        <ion-input formControlName="username" type="text" [(ngModel)]="user.username" ></ion-input>
+        <ion-label floating>Name</ion-label>
+        <ion-input formControlName="name" type="text" [(ngModel)]="user.name"></ion-input>
       </ion-item>
 
-      <ng-container *ngFor="let validation of validation_messages.username">
-        <ion-item *ngIf="signUpUser.get('username').hasError(validation.type) && (signUpUser.get('username').dirty || signUpUser.get('username').touched)">
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input formControlName="email" type="text" [(ngModel)]="user.email"></ion-input>
+      </ion-item>
+      
+      <ng-container *ngFor="let validation of validation_messages.email">
+        <ion-item *ngIf="signUpUser.get('email').hasError(validation.type) && (signUpUser.get('email').dirty || signUpUser.get('email').touched)">
           <p>{{validation.message}}</p>
-        </ion-item>
+          </ion-item>
       </ng-container>
 
       <ion-item>
@@ -34,20 +34,27 @@
       </ion-item>
 
       <ng-container *ngFor="let validation of validation_messages.password">
-          <ion-item *ngIf="signUpUser.get('password').hasError(validation.type) && (signUpUser.get('password').dirty || signUpUser.get('password').touched)">
-            <p>{{validation.message}}</p>
-          </ion-item>
-        </ng-container>
+        <ion-item *ngIf="signUpUser.get('password').hasError(validation.type) && (signUpUser.get('password').dirty || signUpUser.get('password').touched)">
+          <p>{{validation.message}}</p>
+        </ion-item>
+      </ng-container>
 
       <ion-item>
         <ion-label floating>Date Of Birth</ion-label>
-        <ion-datetime formControlName="fullname" displayFormat="MMM DD, YYYY" [(ngModel)]="user.fullname"></ion-datetime>
+        <ion-datetime formControlName="dateofbirth" displayFormat="MMM DD, YYYY" [(ngModel)]="user.dateofbirth"></ion-datetime>
       </ion-item>
+
+      <ng-container *ngFor="let validation of validation_messages.dateofbirth">
+        <ion-item *ngIf="signUpUser.get('dateofbirth').hasError(validation.type) && (signUpUser.get('dateofbirth').dirty || signUpUser.get('dateofbirth').touched)">
+          <p>{{validation.message}}</p>
+        </ion-item>
+      </ng-container>
     </ion-list>
 
     <button ion-button type="submit" block>Sign Up</button>
 
   </form>
+
 
   <p>By signing up, you agree with the Terms of Service, as well as to receive occasional emails from us.</p>
 
