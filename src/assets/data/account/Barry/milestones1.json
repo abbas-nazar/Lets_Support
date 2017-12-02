@@ -1,0 +1,208 @@
+{
+    "milestones": [
+        {
+          "name": "Register for the marathon",
+          "price": "100",
+          "completed": "false"
+        },
+        {
+          "name": "Buy necessities",
+          "price": "50",
+          "completed": "false",
+          "children": [
+            {
+              "name": "Flight ticket",
+              "price": "25",
+              "completed": "true"
+            },
+            {
+              "name": "Book place to stay",
+              "price": "25",
+              "completed": "true"
+            },
+            {
+              "name": "New running gear",
+              "price": "25",
+              "completed": "true"
+            },
+            {
+              "name": "Nutrition",
+              "price": "25",
+              "completed": "true"
+            }
+          ]
+        },
+        {
+          "name": "Training",
+          "price": "500",
+          "completed": "false",
+          "children": [
+            {
+              "name": "Training week 1",
+              "price": "25",
+              "completed": "false",
+              "children": [
+                {
+                  "name": "Run 10 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 15 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 20 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 35 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Weight training",
+                  "price": "10",
+                  "completed": "true"
+                }
+              ]
+            },
+            {
+              "name": "Training week 2",
+              "price": "25",
+              "completed": "false",
+              "children": [
+                {
+                  "name": "Run 10 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 15 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 20 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 35 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Weight training",
+                  "price": "10",
+                  "completed": "true"
+                }
+              ]
+            },
+            {
+              "name": "Training week 3",
+              "price": "25",
+              "completed": "false",
+              "children": [
+                {
+                  "name": "Run 10 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 15 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 20 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 35 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Weight training",
+                  "price": "10",
+                  "completed": "true"
+                }
+              ]
+            },
+            {
+              "name": "Training week 4",
+              "price": "25",
+              "completed": "false",
+              "children": [
+                {
+                  "name": "Run 10 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 15 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 20 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 35 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Weight training",
+                  "price": "10",
+                  "completed": "true"
+                }
+              ]
+            },
+            {
+              "name": "Training week 5",
+              "price": "25",
+              "completed": "false",
+              "children": [
+                {
+                  "name": "Run 10 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 15 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 20 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Run 35 kilometers",
+                  "price": "10",
+                  "completed": "true"
+                },
+                {
+                  "name": "Weight training",
+                  "price": "10",
+                  "completed": "true"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Finish top 20",
+          "price": "200",
+          "completed": "false"
+        }
+    ]
+}

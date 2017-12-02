@@ -4,20 +4,12 @@
  * [ ] Password check
  * [ ] Add Forgot password
  * [ ] Send profile data to goal page so that goal page knows who logged in
- * ![ ] profiles provider query() takes a while to respond! Build in an await function or something!
  */
 
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs'
 import { Profiles } from '../../providers/profiles'
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -25,23 +17,29 @@ import { Profiles } from '../../providers/profiles'
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  rememberMe: boolean = false
-  currentProfile: any[];
+  rememberMe: boolean
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public loadingCtrl: LoadingController,
-    public profiles: Profiles) {
+    private toast: ToastController,
+    private profiles: Profiles) {}
 
+  async login() {
+    try {
+      const result = this.profiles.query()
+      if (result) {
+        this.navCtrl.setRoot(TabsPage, {
+          currentUserFromLogin: result[0]
+        })
+      }
     }
-
-  login() {
-    this.currentProfile = this.profiles.query()
-
-    this.navCtrl.push(TabsPage, {
-      currentUserFromLogin : this.currentProfile[0]    
-    })
+    catch (error) {
+      this.toast.create({
+        message: `Something went wrong`,
+        duration: 3000
+      }).present()
+    }
   }
 
   navigateToSignUp(){

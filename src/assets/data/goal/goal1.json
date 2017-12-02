@@ -1,0 +1,9 @@
+{
+    "goals":[
+        {
+          "id": "0",
+          "goal": "Run the New York marathon 2018",
+          "goaldescription": "This is an example of a goal which is used to test this app. In this case the achiever is going to do the necessary things to compete and finish in the New York marathon of 2018."
+        }
+    ]
+}

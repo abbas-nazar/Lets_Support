@@ -13,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Profiles } from '../providers/profiles'
+import { CurrentUserProvider } from '../providers/current-user/current-user';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { Profiles } from '../providers/profiles'
     StatusBar,
     SplashScreen,
     Profiles,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CurrentUserProvider
   ]
 })
 export class AppModule {}

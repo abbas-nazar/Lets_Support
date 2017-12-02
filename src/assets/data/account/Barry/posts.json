@@ -1,0 +1,34 @@
+{
+    "posts": [
+    {
+      "name": "",      
+      "postImageUrl": "",
+      "profileImage": "",
+      "text": "Registered for the marathon!",
+      "date": "October 20, 2017",
+      "likes": 0,
+      "comments": 0,
+      "timestamp": "10d ago"
+    },
+    {
+      "name": "",
+      "profileImage": "",
+      "postImageUrl": "",
+      "text": "Ran my first 10 kilometers of this training. With minor injuries :(",
+      "date": "October 10, 2017",
+      "likes": 0,
+      "comments": 0,
+      "timestamp": "30d ago"
+    },
+    {
+      "name": "",      
+      "profileImage": "",
+      "postImageUrl": "assets/img/posts/cheap-flight-ticket.png",
+      "date": "October 2, 2017",
+      "likes": 0,
+      "text": "Bought the flight tickets!",
+      "comments": 0,
+      "timestamp": "1mo ago"
+    }
+  ]
+}

@@ -11,9 +11,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: string = 'LoginPage';
+  rootPage: string = 'LoginPage'
 
-  pages: Array<{title: string, component: any, icon: string}>;
+  pages: Array<{title: string, component: any, icon: string}>
 
   constructor(platform: Platform,
     statusBar: StatusBar,
@@ -21,9 +21,10 @@ export class MyApp {
       platform.ready().then(() => {
         // Okay, so the platform is ready and our plugins are available.
         // Here you can do any higher level native things you might need.
-        statusBar.styleDefault();
-        splashScreen.hide();
-    });
+        statusBar.styleDefault()
+        splashScreen.hide()
+    }
+  )
     
     this.pages = [
       { title: 'Notifications', component: TabsPage, icon: 'home' },
@@ -33,14 +34,13 @@ export class MyApp {
       { title: 'Cashier', component: TabsPage, icon: 'home' },
       { title: 'Settings & Privacy', component: TabsPage, icon: 'home' },
       { title: 'Help Center', component: TabsPage, icon: 'home' }
-    ];
-
+    ]
   }
 
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.nav.setRoot(page.component)
   }
 
 }
