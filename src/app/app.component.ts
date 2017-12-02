@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TabsPage } from '../pages/tabs/tabs';
 import { WelcomePage } from '../pages/welcome/welcome'
 import { BecomeASupporterPage } from '../pages/become-a-supporter/become-a-supporter'
+import { MainGoalPage } from '../pages/main-goal/main-goal'
 
 @Component({
   templateUrl: 'app.html'
@@ -27,7 +28,7 @@ export class MyApp {
     
     this.pages = [
       { title: 'Notifications', component: TabsPage, icon: 'home' },
-      { title: 'Goals', component: TabsPage, icon: 'home' },
+      { title: 'Goals', component: MainGoalPage, icon: 'home' },
       { title: 'Profile', component: TabsPage, icon: 'home' },
       { title: 'Edit Profile', component: TabsPage, icon: 'home' },
       { title: 'Cashier', component: TabsPage, icon: 'home' },

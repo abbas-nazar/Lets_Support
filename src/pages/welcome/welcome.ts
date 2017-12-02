@@ -11,7 +11,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular'
 import {FormGroup, FormBuilder, FormControl, Validators} from "@angular/forms"
 
 import { TabsPage } from '../tabs/tabs'
-import { SignUpPage } from '../sign-up/sign-up'
 import { LoginPage } from '../login/login'
 
 @IonicPage()
@@ -43,7 +42,7 @@ export class WelcomePage {
   redirectToRegisterPage(){
     // Only submit if email is valid
     if(this.signUpEmail.valid){
-      this.navCtrl.push(SignUpPage, {email: this.email})
+      this.navCtrl.push('SignUpPage', {email: this.email})
     }
   }
 }

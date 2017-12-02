@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the BecomeASupporterPage page.
+ * Generated class for the MainGoalPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,24 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-become-a-supporter',
-  templateUrl: 'become-a-supporter.html',
+  selector: 'page-main-goal',
+  templateUrl: 'main-goal.html',
 })
-export class BecomeASupporterPage {
-  currentUser: any
-  goals: any[]
+export class MainGoalPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.currentUser = navParams.get('currentUserFromLogin')
-    this.goals = this.currentUser.goals
   }
 
   ionViewDidLoad() {
+    console.log('ionViewDidLoad MainGoalPage');
   }
-
-  submitSupport(){
-    this.navCtrl.pop()
-  }
-
 
 }

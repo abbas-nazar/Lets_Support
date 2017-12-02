@@ -6,13 +6,13 @@ import { MyApp } from './app.component';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { WelcomePage } from '../pages/welcome/welcome';
-import { SignUpPage } from '../pages/sign-up/sign-up';
 import { LoginPage } from '../pages/login/login'
 import { GoalPage } from '../pages/goal/goal'
 import { PostsPage } from '../pages/posts/posts'
 import { CommunityPage } from '../pages/community/community'
 import { BecomeASupporterPage } from '../pages/become-a-supporter/become-a-supporter'
 import { SupportingPage } from '../pages/supporting/supporting'
+import { MainGoalPage } from '../pages/main-goal/main-goal'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,13 +24,13 @@ import { Profiles } from '../providers/profiles'
     MyApp,
     TabsPage,
     WelcomePage,
-    SignUpPage,
     LoginPage,
     GoalPage,
     PostsPage,
     CommunityPage,
     BecomeASupporterPage,
-    SupportingPage
+    SupportingPage,
+    MainGoalPage
   ],
   imports: [
     BrowserModule,
@@ -45,13 +45,13 @@ import { Profiles } from '../providers/profiles'
     MyApp,
     TabsPage,
     WelcomePage,
-    SignUpPage,
     LoginPage,
     GoalPage,
     PostsPage,
     CommunityPage,
     BecomeASupporterPage,
-    SupportingPage
+    SupportingPage,
+    MainGoalPage
   ],
   providers: [
     StatusBar,

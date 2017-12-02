@@ -10,6 +10,7 @@ import 'rxjs/add/operator/map'
 
 import { BecomeASupporterPage } from '../become-a-supporter/become-a-supporter'
 import { SupportingPage } from '../supporting/supporting'
+import { MainGoalPage } from '../main-goal/main-goal'
 
 // import { Profile } from '../../models/profile'
 import { Profiles } from '../../providers/profiles'
@@ -74,7 +75,7 @@ export class GoalPage {
   }
 
   navToGoal() {
-
+    this.navCtrl.push(MainGoalPage)
   }
 
   // Goal Progression Accordion
