@@ -12,7 +12,7 @@
   <!-- Header of Goal Section -->
   <div class="goal-section-header">
     <div id="profile-info" padding>
-      
+
       <ion-grid>
         <ion-row>
           <ion-col col-4>
@@ -30,7 +30,7 @@
                 <span class="support" menuClose (click)="navToSupporting()">3 Supporting</span>
             </ion-col>
             <ion-col>
-                <span class="support" menuClose (click)="navToSupporters()">0 Supporters</span>                
+                <span class="support" menuClose (click)="navToSupporters()">0 Supporters</span>
             </ion-col>
         </ion-row>
       </ion-grid>
@@ -59,86 +59,33 @@
     </ion-card>
   </div>
 
-  <!-- Goal Progression Accordion -->
-  <ion-list class="accordion-list" no-padding no-lines text-wrap>
-    <!-- First Level -->
-    <ion-list-header *ngFor="let item of information; let i = index" no-lines no-padding>
-      <ion-row>
-        <ion-col col-2>
-          <ion-item>
-            <ion-checkbox checked="{{item.completed}}"></ion-checkbox>
-          </ion-item>
-        </ion-col>
-        <ion-col col-10>
-          <!-- Toggle Button -->
-          <button ion-item (click)="toggleSection(i)" detail-none text-wrap [ngClass]="{'section-active': item.open, 'section': !item.open}">
-            <ion-row>
-              <ion-col col-9>
-                {{ item.name }}
-              </ion-col>
-              <ion-col col-3>
-                {{ item.price | currency:'USD':true }}
-              </ion-col>
-            </ion-row>
-              <ion-icon item-right name="arrow-forward" *ngIf="item.children && !item.open"></ion-icon>
-              <ion-icon item-right name="arrow-down" *ngIf="item.children && item.open"></ion-icon>
-          </button>
-        </ion-col>
-      </ion-row>
-  
-      <ion-list *ngIf="item.children && item.open" no-lines no-padding>
-        <!-- Second Level -->
-        <ion-list *ngFor="let child of item.children; let j = index" no-padding>
-          <ion-row>
-            <ion-col col-2>
-                <ion-item>
-                  <ion-checkbox checked="{{child.completed}}"></ion-checkbox>
-                </ion-item>
-            </ion-col>
-            <ion-col col-10>
-              <!-- Toggle Button -->
-                <button ion-item (click)="toggleItem(i, j)" class="child" detail-none text-wrap>
-                  <ion-row>
-                    <ion-col col-9>
-                        {{ child.name }}
-                    </ion-col>
-                    <ion-col col-3>
-                      {{ child.price | currency:'USD':true }}
-                    </ion-col>
-                  </ion-row>
-                  <!-- {{ child.name }} -->
-                  <ion-icon item-right name="arrow-forward" *ngIf="child.children && !child.open"></ion-icon>
-                  <ion-icon item-right name="arrow-down" *ngIf="child.children && child.open"></ion-icon>
-                </button>
-            </ion-col>
-          </ion-row>
-  
-          <ion-list *ngIf="child.children && child.open" >
-            <!-- Third Level -->
-            <ion-row *ngFor="let item of child.children; let k = index">
-              <ion-col col-2>
-                <ion-item >
-                  <ion-checkbox checked="{{item.completed}}"></ion-checkbox>
-                </ion-item>
-              </ion-col>
-              <ion-col col-10>
-                <ion-item  detail-none class="child-item" text-wrap>
-                  <ion-row>
-                    <ion-col col-9>
-                      {{ item.name }}
-                    </ion-col>
-                    <ion-col col-3>
-                      {{ item.price | currency:'USD':true }}
-                    </ion-col>
-                  </ion-row>
-                </ion-item>
-              </ion-col>
-            </ion-row>
-          </ion-list>
-        </ion-list>
-      </ion-list>
-    </ion-list-header>
-  </ion-list>
+  <ul class="collapsible popout" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-body"><ul class="collapsible" data-collapsible="accordion">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+      </ul>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
 
 </ion-content>
-  

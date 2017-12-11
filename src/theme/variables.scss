@@ -1,6 +1,29 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+//variable for collapsible
+$collapsible-height: 3rem !default;
+$collapsible-line-height: $collapsible-height !default;
+$collapsible-header-color: #fff !default;
+$collapsible-border-color: #ddd !default;
+$num-cols: 12 !default;
+$gutter-width: 1.5rem !default;
+$element-top-margin: $gutter-width/3 !default;
+$element-bottom-margin: ($gutter-width*2)/3 !default;
+$navbar-height: 64px !default;
+$navbar-line-height: $navbar-height !default;
+$navbar-height-mobile: 56px !default;
+$navbar-line-height-mobile: $navbar-height-mobile !default;
+$navbar-font-size: 1rem !default;
+$navbar-font-color: #fff !default;
+$navbar-brand-font-size: 2.1rem !default;
+$sidenav-font-size: 14px !default;
+$sidenav-font-color: rgba(0,0,0,.87) !default;
+$sidenav-bg-color: #fff !default;
+$sidenav-padding: 16px !default;
+$sidenav-item-height: 48px !default;
+$sidenav-line-height: $sidenav-item-height !default;
+
 // Font path is used to include ionicons,
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";

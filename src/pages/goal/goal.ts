@@ -12,6 +12,7 @@ import 'rxjs/add/operator/map'
 // import { Profile } from '../../models/profile'
 import { Profiles } from '../../providers/profiles'
 
+declare var abc: any;
 /**
  * Generated class for the GoalPage page.
  *
@@ -25,18 +26,19 @@ import { Profiles } from '../../providers/profiles'
   templateUrl: 'goal.html',
 })
 export class GoalPage {
-  information: any[]
-  profile: any[]
-  currentProfile: any
-  currentProfileGoals: any[]
+  information: any[];
+  profile: any[];
+  currentProfile: any;
+  currentProfileGoals: any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http, profiles: Profiles) {
     // Profiles
-    this.currentProfile = navParams.data //|| profiles.defaultProfile
-    this.currentProfileGoals = this.currentProfile.goals[0]
-    this.information = this.currentProfile.goals[0].items
-    
-    // this.information = this.currentProfileGoals.items    
+    this.currentProfile = navParams.data; //|| profiles.defaultProfile
+    this.currentProfileGoals = this.currentProfile.goals[0];
+    this.information = this.currentProfile.goals[0].items;
+    abc();
+
+    // this.information = this.currentProfileGoals.items
 
     // Goal Progression Accordion
       // let localData = http.get('assets/goal.json').map(res => res.json().items)
@@ -52,7 +54,7 @@ export class GoalPage {
     // this.navCtrl.push(BecomeASupporterPage);
     // this.currentProfileGoals = this.currentProfile.goals[0]
     // console.log(this.currentProfile.goals[0])
-    
+
     this.navCtrl.push('BecomeASupporterPage', {
       currentUserFromLogin: this.currentProfile
     });
@@ -83,4 +85,6 @@ export class GoalPage {
   toggleItem(i, j){
     this.information[i].children[j].open = !this.information[i].children[j].open
   }
+
+
 }
